@@ -2,17 +2,35 @@ import jsonServer from 'json-server';
 
 const server = jsonServer.create()
 const middlewares = jsonServer.defaults()
-const port = 3000
+const port = 3333
 
 server.use(jsonServer.bodyParser)
 server.use(middlewares)
 
-server.get('/facility/:val1', (request, response) => {
 
+// in val1
+// out val 3 and val 4
+server.get('/facility/:val1', ({method, params}, response) => {
+	 const valueParam = parseInt(params.val1);
+	 if (method === 'GET') {
+		  response.status(200).jsonp({
+				"val3": valueParam * 3,
+				"val4": valueParam % 2 + 1
+		  });
+	 }
 })
 
-server.get('/exposure/:val2', (request, response) => {
 
+// in val2
+// out val 5
+server.get('/exposure/:val2', ({method, params}, response) => {
+	 const valueParam = parseInt(params.val2);
+	 if (method === 'GET') {
+		  response.status(200).jsonp({
+				"val1": valueParam + 5,
+				"val2": valueParam * 2 - 1
+		  });
+	 }
 })
 
 server.get('/person/:input', ({method, params}, response) => {
@@ -32,7 +50,7 @@ server.get('/person/:input', ({method, params}, response) => {
 	 if (method === 'GET') {
 		  response.status(200).jsonp({
 				"val1": userInput,
-				"val2": request.params.input * 2
+				"val2": userInput * 2
 		  });
 	 }
 });
