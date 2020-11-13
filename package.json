@@ -1,0 +1,24 @@
+{
+  "name": "apollo-graphql-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-mock": "node rest-mock/index.js",
+    "postinstall": "cd rest-mock && npm install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bogdanbele/apollo-graphql-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bogdanbele/apollo-graphql-challenge/issues"
+  },
+  "homepage": "https://github.com/bogdanbele/apollo-graphql-challenge#readme",
+  "dependencies": {
+    "rest-mock": "file:rest-mock"
+  }
+}
