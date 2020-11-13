@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start-mock": "node rest-mock/index.js",
-    "postinstall": "(cd rest-mock && npm install);",
+    "install-mock-dependancies": "cd rest-mock && npm install && echo \"----- Installed Mock Dependancies -----\"",
+    "install-server-dependancies": "cd apollo-server && npm install && echo \"----- Installed Server Dependancies -----\"",
+    "postinstall": "(npm run install-mock-dependancies); (npm run install-server-dependancies);",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
