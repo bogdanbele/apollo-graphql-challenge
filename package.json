@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start-mock": "node rest-mock/index.js",
-    "postinstall": "cd rest-mock && npm install",
+    "postinstall": "(cd rest-mock && npm install);",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
