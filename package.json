@@ -1,13 +1,13 @@
 {
   "name": "apollo-graphql-challenge",
   "version": "1.0.0",
-  "description": "",
+  "description": "Rest Mock and handling via Apollo",
   "main": "index.js",
   "scripts": {
     "start-mock": "node rest-mock/index.js",
-    "install-mock-dependancies": "cd rest-mock && npm install && echo \"----- Installed Mock Dependancies -----\"",
-    "install-server-dependancies": "cd apollo-server && npm install && echo \"----- Installed Server Dependancies -----\"",
-    "postinstall": "(npm run install-mock-dependancies); (npm run install-server-dependancies);",
+    "install:mock-dependancies": "cd rest-mock && npm install --no-warning && echo \"----- Installed Mock Dependancies -----\"",
+    "install:server-dependancies": "cd apollo-server && npm install --no-warning && echo \"----- Installed Server Dependancies -----\"",
+    "postinstall": "(npm run install:mock-dependancies); (npm run install:server-dependancies);",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

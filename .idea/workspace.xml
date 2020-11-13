@@ -21,7 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="24f8064a-45d4-4a04-a2ce-baa223977d6d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apollo-server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apollo-server/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest-mock/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/rest-mock/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +54,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605217447653</updated>
       <workItem from="1605217449063" duration="6121000" />
-      <workItem from="1605264677786" duration="269000" />
+      <workItem from="1605264677786" duration="1517000" />
     </task>
     <servers />
   </component>
