@@ -1,4 +1,4 @@
-import { gql } from "apollo-server"
+import { gql } from "apollo-server";
 
 const typeDefs = gql`
     type UserResponse {
@@ -10,4 +10,4 @@ const typeDefs = gql`
     }
 `;
 
-export default typeDefs
+export default typeDefs;

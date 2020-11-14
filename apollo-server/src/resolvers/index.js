@@ -1,7 +1,6 @@
 const resolvers = {
 	 Query: {
 		  exposure: async (parent, {input}, {dataSources}) => {
-				
 				// Step 1
 				const {val1, val2} = await dataSources.mockAPI.fetchPerson(input)
 				
@@ -16,4 +15,4 @@ const resolvers = {
 	 }
 }
 
-export default resolvers
+export default resolvers;

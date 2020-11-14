@@ -20,13 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24f8064a-45d4-4a04-a2ce-baa223977d6d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apollo-server/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apollo-server/src/api/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apollo-server/src/resolvers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apollo-server/src/types/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apollo-server/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apollo-server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apollo-server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apollo-client/src/components/secretValueCalculator/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/apollo-client/src/components/secretValueCalculator/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apollo-server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/apollo-server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apollo-server/src/resolvers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/apollo-server/src/resolvers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apollo-server/src/types/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/apollo-server/src/types/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rest-mock/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/rest-mock/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rest-mock/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/rest-mock/package.json" afterDir="false" />
@@ -49,13 +48,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/apollo-server/src" />
+      <recent name="$PROJECT_DIR$/apollo-client/src/components" />
       <recent name="$PROJECT_DIR$/apollo-server" />
+      <recent name="$PROJECT_DIR$/apollo-server/src" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -69,7 +70,7 @@
       <workItem from="1605217449063" duration="6121000" />
       <workItem from="1605264677786" duration="6501000" />
       <workItem from="1605285921677" duration="6155000" />
-      <workItem from="1605361405629" duration="3181000" />
+      <workItem from="1605361405629" duration="19913000" />
     </task>
     <servers />
   </component>
@@ -93,13 +94,31 @@
       <screen x="0" y="23" width="3370" height="1417" />
     </state>
     <state x="607" y="539" key="#com.intellij.fileTypes.FileTypeChooser/0.23.3370.1417/-1792.343.1792.1097@0.23.3370.1417" timestamp="1605280007342" />
-    <state x="543" y="486" width="598" height="492" key="find.popup" timestamp="1605362326129">
+    <state x="799" y="585" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1605365525996">
       <screen x="0" y="25" width="3365" height="1415" />
+    </state>
+    <state x="799" y="585" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.3365.1415/-1792.345.1792.1095@0.25.3365.1415" timestamp="1605365525996" />
+    <state x="555" y="486" width="612" height="492" key="find.popup" timestamp="1605382840767">
+      <screen x="0" y="25" width="3440" height="1415" />
     </state>
     <state x="543" y="486" width="598" height="492" key="find.popup/0.25.3365.1415/-1792.345.1792.1095@0.25.3365.1415" timestamp="1605362326129" />
-    <state x="505" y="347" width="672" height="678" key="search.everywhere.popup" timestamp="1605362349818">
-      <screen x="0" y="25" width="3365" height="1415" />
+    <state x="555" y="486" width="612" height="492" key="find.popup/0.25.3440.1415/-1721.345.1721.1095@0.25.3440.1415" timestamp="1605382840767" />
+    <state x="516" y="347" width="687" height="678" key="search.everywhere.popup" timestamp="1605385640993">
+      <screen x="0" y="25" width="3440" height="1415" />
     </state>
     <state x="505" y="347" width="672" height="678" key="search.everywhere.popup/0.25.3365.1415/-1792.345.1792.1095@0.25.3365.1415" timestamp="1605362349818" />
+    <state x="516" y="347" width="687" height="678" key="search.everywhere.popup/0.25.3440.1415/-1721.345.1721.1095@0.25.3440.1415" timestamp="1605385640993" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/apollo-client/src/components/App.js</url>
+          <line>14</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

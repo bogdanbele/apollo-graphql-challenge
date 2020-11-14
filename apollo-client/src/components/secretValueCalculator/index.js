@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useCallback, useState} from 'react';
 import ReactDOM from 'react-dom';
 import {Button} from "@material-ui/core";
 import TextField from "@material-ui/core/TextField";
@@ -26,9 +26,11 @@ const SecretValueCalculator = () => {
 	 const [inputValue, setInputValue] = useState(null);
 	 const [fetchExposure, {loading, error, data}] = useLazyQuery(FETCH_EXPOSURE);
 	 
-	 if (data) {
-		  console.log(data.exposure)
-	 }
+	 const fetchExposureCallback = useCallback(() => {
+	 	 fetchExposure({
+			  variables: {inputValue}
+		 });
+	 }, [fetchExposure, inputValue]);
 	 
 	 return (
 		  <Box display="flex"
@@ -41,23 +43,30 @@ const SecretValueCalculator = () => {
 					 <TextField
 						  style={{marginBottom: 20}}
 						  type="number"
-						  onBlur={(event) => {
+						  onChange={(event) => {
 								setInputValue(parseInt(event.target.value));
+						  }}
+						  onKeyPress={(event) => {
+								if (event.key === 'Enter') {
+									 fetchExposureCallback();
+									 event.preventDefault();
+								}
 						  }}
 					 />
 					 <Button variant="contained" color="primary"
-								onClick={() => fetchExposure({
-									 variables: {inputValue}
-								})}>Calculate Exposure</Button>
-					
+								onClick={() => {
+									 console.log('onclick')
+									 fetchExposureCallback()
+								}}>Calculate Exposure</Button>
+				
 				</Box>
-				{data && <pre>{JSON.stringify(data, null, 2)}</pre>}
+				{data && <pre>{JSON.stringify(data.exposure, null, 2)}</pre>}
 				{error &&
 				<pre>
 					 <span>{getUserMessage(error)}</span>
 					 </pre>}
 		  </Box>
-		  
+	 
 	 )
 }
 
