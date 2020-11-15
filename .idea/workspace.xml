@@ -20,12 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24f8064a-45d4-4a04-a2ce-baa223977d6d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apollo-client/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/apollo-client/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apollo-client/src/components/modal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/apollo-client/src/components/modal/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apollo-client/src/components/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/apollo-client/src/components/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apollo-client/src/components/valueCalculator/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/apollo-client/src/components/valueCalculator/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apollo-client/src/components/valueCalculator/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/apollo-client/src/components/valueCalculator/styles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,15 +39,21 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/apollo-client" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/apollo-client/node_modules/prettier" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="run.prettier.on.save" value="true" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apollo-client" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/apollo-client/src/components" />
       <recent name="$PROJECT_DIR$/apollo-server" />
@@ -69,7 +72,7 @@
       <workItem from="1605264677786" duration="6501000" />
       <workItem from="1605285921677" duration="6155000" />
       <workItem from="1605361405629" duration="34000000" />
-      <workItem from="1605461590806" duration="9355000" />
+      <workItem from="1605461590806" duration="9861000" />
     </task>
     <servers />
   </component>
@@ -98,22 +101,23 @@
     </state>
     <state x="799" y="585" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.3365.1415/-1792.345.1792.1095@0.25.3365.1415" timestamp="1605365525996" />
     <state x="817" y="585" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.3440.1415/-1717.345.1717.1095@0.25.3440.1415" timestamp="1605469551819" />
-    <state x="1040" y="367" key="SettingsEditor" timestamp="1605461598723">
+    <state x="1040" y="367" key="SettingsEditor" timestamp="1605473635717">
       <screen x="0" y="25" width="3440" height="1415" />
     </state>
     <state x="1040" y="367" key="SettingsEditor/0.25.3440.1415/-1717.345.1717.1095@0.25.3440.1415" timestamp="1605461598723" />
+    <state x="1040" y="367" key="SettingsEditor/0.25.3440.1415/-1719.345.1719.1095@0.25.3440.1415" timestamp="1605473635717" />
     <state x="1039" y="368" key="SettingsEditor/0.25.3440.1415/-1730.345.1730.1095@0.25.3440.1415" timestamp="1605438117275" />
     <state x="585" y="290" key="SettingsEditor/62.25.1730.1095@62.25.1730.1095" timestamp="1605446240601" />
     <state width="498" height="445" key="SwitcherDM" timestamp="1605438524712">
       <screen x="0" y="25" width="3440" height="1415" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.25.3440.1415/-1730.345.1730.1095@0.25.3440.1415" timestamp="1605438524712" />
-    <state x="555" y="486" width="612" height="578" key="find.popup" timestamp="1605473231546">
+    <state x="555" y="486" width="612" height="578" key="find.popup" timestamp="1605473297969">
       <screen x="0" y="25" width="3440" height="1415" />
     </state>
     <state x="543" y="486" width="598" height="492" key="find.popup/0.25.3365.1415/-1792.345.1792.1095@0.25.3365.1415" timestamp="1605362326129" />
     <state x="555" y="486" width="612" height="578" key="find.popup/0.25.3440.1415/-1717.345.1717.1095@0.25.3440.1415" timestamp="1605473123229" />
-    <state x="555" y="486" width="612" height="578" key="find.popup/0.25.3440.1415/-1719.345.1719.1095@0.25.3440.1415" timestamp="1605473231546" />
+    <state x="555" y="486" width="612" height="578" key="find.popup/0.25.3440.1415/-1719.345.1719.1095@0.25.3440.1415" timestamp="1605473297969" />
     <state x="555" y="486" width="612" height="492" key="find.popup/0.25.3440.1415/-1721.345.1721.1095@0.25.3440.1415" timestamp="1605382840767" />
     <state x="516" y="347" width="687" height="678" key="search.everywhere.popup" timestamp="1605472098246">
       <screen x="0" y="25" width="3440" height="1415" />
@@ -121,22 +125,5 @@
     <state x="505" y="347" width="672" height="678" key="search.everywhere.popup/0.25.3365.1415/-1792.345.1792.1095@0.25.3365.1415" timestamp="1605362349818" />
     <state x="516" y="347" width="687" height="678" key="search.everywhere.popup/0.25.3440.1415/-1717.345.1717.1095@0.25.3440.1415" timestamp="1605472098246" />
     <state x="516" y="347" width="687" height="678" key="search.everywhere.popup/0.25.3440.1415/-1721.345.1721.1095@0.25.3440.1415" timestamp="1605393031588" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/apollo-client/src/components/App.js</url>
-          <line>31</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/apollo-client/src/components/App.js</url>
-          <line>12</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
