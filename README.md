@@ -2,9 +2,9 @@
 ----
 
 ####  Product Structure
-> ---- apollo-client
----- apollo-server
----- rest-mock
+- ---- apollo-client
+- ---- apollo-server
+- ---- rest-mock
 #### Starting The project 
 - Run `npm i` inside the root folder to begin installing the dependancies of all applications.
 - In order to start the Mock Rest Server, run `npm run start-mock` inside the root folder;
