@@ -50,7 +50,7 @@ const SecretValueCalculator = () => {
   const onChange = (event) => {
     const parsedInput = parseInt(event.target.value);
     setInputValue(parsedInput);
-    setIsValid(isInRange(parsedInput, 0, 11));
+    setIsValid(isInRange(parsedInput, 1, 11));
   };
 
   const onKeyPress = (event) => {
