@@ -5,7 +5,7 @@ import {IS_NOTIFICATION_MODAL_OPEN} from "../../apollo/queries";
 import {Overlay} from "./styles";
 import {CardWrapper} from "../valueCalculator/styles";
 
-const ResponseModal = ({children}) => {
+const ModalPortal = ({children}) => {
 	 const client = useApolloClient();
 	 
 	 const closeNotificationModal = () => {
@@ -27,4 +27,4 @@ const ResponseModal = ({children}) => {
 		  domElement);
 }
 
-export default ResponseModal
+export default ModalPortal

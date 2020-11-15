@@ -1,10 +1,10 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useRef, useState} from 'react';
 import {Button, CardContent, CardHeader} from "@material-ui/core";
 import TextField from "@material-ui/core/TextField";
-import {gql, useApolloClient, useLazyQuery} from "@apollo/client";
+import {gql, useLazyQuery} from "@apollo/client";
 import isInRange from "lodash.inrange";
 import {CardWrapper} from './styles';
-import ResponseModal from "../modal";
+import ModalPortal from "../modal";
 import {IS_NOTIFICATION_MODAL_OPEN} from "../../apollo/queries";
 
 const FETCH_EXPOSURE = gql`
@@ -51,6 +51,7 @@ const SecretValueCalculator = () => {
 	 
 	 const onKeyPress = (event) => {
 		  if (event.key === 'Enter' && isValid) {
+		  	 	event.target.blur();
 				fetchExposureCallback();
 				event.preventDefault();
 		  }
@@ -58,10 +59,16 @@ const SecretValueCalculator = () => {
 	 
 	 const multiplyValues = ({val3, val5}) => val3 * val5
 	 
+	 const inputElementRef = useRef(null);
 	 
 	 return (
-		  <CardWrapper>
+		  <CardWrapper style={{width:500}}>
+				<h1>Let's solve things together</h1>
+				<p>We have developed an in-house tool to calculate
+					 a user's exposure to the virus. We predict it's around 94% accurate.</p>
+				<h4>Please input the user id we should check</h4>
 				<TextField
+					 ref={inputElementRef}
 					 style={{marginBottom: 20}}
 					 type="number"
 					 onChange={onChange}
@@ -72,14 +79,14 @@ const SecretValueCalculator = () => {
 						  color="primary"
 						  onClick={fetchExposureCallback}>Calculate</Button>
 				{data &&
-					 <ResponseModal>
+					 <ModalPortal>
 						  <CardHeader title="Success" subheader="Your calculation is completed"/>
 						  <CardContent>
-								{multiplyValues(data.exposure)}
+								<span>The amount of exposure is </span>{multiplyValues(data.exposure)}
 						  </CardContent>
-					 </ResponseModal>}
+					 </ModalPortal>}
 				{error &&
-							<pre>
+				<pre>
 								<span>{getUserMessage(error)}</span>
 						  </pre>}
 		  </CardWrapper>

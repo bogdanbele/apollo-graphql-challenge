@@ -21,12 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="24f8064a-45d4-4a04-a2ce-baa223977d6d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apollo-client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/apollo-client/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apollo-client/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/apollo-client/src/components/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apollo-client/src/components/modal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/apollo-client/src/components/modal/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apollo-client/src/components/modal/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/apollo-client/src/components/modal/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apollo-client/src/components/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/apollo-client/src/components/styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apollo-client/src/components/valueCalculator/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/apollo-client/src/components/valueCalculator/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apollo-client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/apollo-client/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apollo-client/src/components/valueCalculator/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/apollo-client/src/components/valueCalculator/styles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +69,7 @@
       <workItem from="1605264677786" duration="6501000" />
       <workItem from="1605285921677" duration="6155000" />
       <workItem from="1605361405629" duration="34000000" />
-      <workItem from="1605461590806" duration="7996000" />
+      <workItem from="1605461590806" duration="9355000" />
     </task>
     <servers />
   </component>
@@ -109,17 +108,18 @@
       <screen x="0" y="25" width="3440" height="1415" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.25.3440.1415/-1730.345.1730.1095@0.25.3440.1415" timestamp="1605438524712" />
-    <state x="555" y="486" width="612" height="578" key="find.popup" timestamp="1605471076741">
+    <state x="555" y="486" width="612" height="578" key="find.popup" timestamp="1605473231546">
       <screen x="0" y="25" width="3440" height="1415" />
     </state>
     <state x="543" y="486" width="598" height="492" key="find.popup/0.25.3365.1415/-1792.345.1792.1095@0.25.3365.1415" timestamp="1605362326129" />
-    <state x="555" y="486" width="612" height="578" key="find.popup/0.25.3440.1415/-1717.345.1717.1095@0.25.3440.1415" timestamp="1605471076741" />
+    <state x="555" y="486" width="612" height="578" key="find.popup/0.25.3440.1415/-1717.345.1717.1095@0.25.3440.1415" timestamp="1605473123229" />
+    <state x="555" y="486" width="612" height="578" key="find.popup/0.25.3440.1415/-1719.345.1719.1095@0.25.3440.1415" timestamp="1605473231546" />
     <state x="555" y="486" width="612" height="492" key="find.popup/0.25.3440.1415/-1721.345.1721.1095@0.25.3440.1415" timestamp="1605382840767" />
-    <state x="516" y="347" width="687" height="678" key="search.everywhere.popup" timestamp="1605471129156">
+    <state x="516" y="347" width="687" height="678" key="search.everywhere.popup" timestamp="1605472098246">
       <screen x="0" y="25" width="3440" height="1415" />
     </state>
     <state x="505" y="347" width="672" height="678" key="search.everywhere.popup/0.25.3365.1415/-1792.345.1792.1095@0.25.3365.1415" timestamp="1605362349818" />
-    <state x="516" y="347" width="687" height="678" key="search.everywhere.popup/0.25.3440.1415/-1717.345.1717.1095@0.25.3440.1415" timestamp="1605471129156" />
+    <state x="516" y="347" width="687" height="678" key="search.everywhere.popup/0.25.3440.1415/-1717.345.1717.1095@0.25.3440.1415" timestamp="1605472098246" />
     <state x="516" y="347" width="687" height="678" key="search.everywhere.popup/0.25.3440.1415/-1721.345.1721.1095@0.25.3440.1415" timestamp="1605393031588" />
   </component>
   <component name="XDebuggerManager">
@@ -127,7 +127,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/apollo-client/src/components/App.js</url>
-          <line>32</line>
+          <line>31</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">

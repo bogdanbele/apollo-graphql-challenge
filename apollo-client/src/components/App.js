@@ -1,7 +1,7 @@
 import React from "react";
 import SecretValueCalculator from "./valueCalculator";
 import {MuiThemeProvider, createMuiTheme} from "@material-ui/core";
-import {Container} from "./styles";
+import {Container, Header} from "./styles";
 import {ThemeProvider} from "styled-components";
 
 const theme = createMuiTheme({
@@ -33,7 +33,13 @@ function App() {
 		  <MuiThemeProvider theme={theme}>
 				<ThemeProvider theme={theme}>
 					 <Container>
-						  <h1>Header</h1>
+						  <Header>
+								<ul>
+									 <li>Home</li>
+									 <li>About</li>
+									 <li>FAQ</li>
+								</ul>
+						  </Header>
 						  <SecretValueCalculator/>
 					 </Container>
 				</ThemeProvider>
