@@ -1,8 +1,7 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useState} from 'react';
 import {Button} from "@material-ui/core";
 import TextField from "@material-ui/core/TextField";
 import {gql, useLazyQuery} from "@apollo/client";
-import Box from "@material-ui/core/Box";
 import isInRange from "lodash.inrange";
 import {CardWrapper} from './styles';
 
@@ -33,8 +32,6 @@ const SecretValueCalculator = () => {
 				variables: {inputValue}
 		  });
 	 }, [fetchExposure, inputValue]);
-	 
-	 console.log(isValid)
 	 
 	 return (
 		  <CardWrapper>

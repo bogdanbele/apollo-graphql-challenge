@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start-mock": "node rest-mock/index.js",
+    "start-server": "cd apollo-server && npm start",
+    "start-client": "cd apollo-client && npm start",
     "install:mock-dependancies": "cd rest-mock && npm install --no-warning && echo \"----- Installed Mock Dependancies -----\"",
     "install:server-dependancies": "cd apollo-server && npm install --no-warning && echo \"----- Installed Server Dependancies -----\"",
     "install:client-dependancies": "cd apollo-client && npm install --no-warning && echo \"----- Installed Client Dependancies -----\"",

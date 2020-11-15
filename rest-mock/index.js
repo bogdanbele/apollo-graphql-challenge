@@ -15,7 +15,7 @@ server.get('/person/:input', ({params}, response) => {
 		  })
 	 }
 	 
-	 if (userInput <= 0 || userInput > 10) {
+	 if ( 0 >= userInput || userInput > 10) {
 		  return response.status(400).jsonp({
 				error: "Value should be between 1 and 10"
 		  })
