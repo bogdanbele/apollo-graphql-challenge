@@ -4,6 +4,7 @@ import TextField from "@material-ui/core/TextField";
 import {gql, useLazyQuery} from "@apollo/client";
 import Box from "@material-ui/core/Box";
 import isInRange from "lodash.inrange";
+import {CardWrapper} from './styles';
 
 const FETCH_EXPOSURE = gql`
     query exposure($inputValue: Int!){
@@ -36,44 +37,34 @@ const SecretValueCalculator = () => {
 	 console.log(isValid)
 	 
 	 return (
-		  <Box display="flex"
-				 alignItems="center"
-				 flexDirection="column">
-				<Box
-					 css={{maxWidth: 150}}
-					 display="flex"
-					 flexDirection="column">
-					 <TextField
-						  style={{marginBottom: 20}}
-						  type="number"
-						  onChange={(event) => {
-								const parsedInput = parseInt(event.target.value);
-								setInputValue(parsedInput);
-								setIsValid(isInRange(parsedInput, 0, 11))
-						  }}
-						  onKeyPress={(event) => {
-								if (event.key === 'Enter' && isValid) {
-									 fetchExposureCallback();
-									 event.preventDefault();
-								}
-						  }}
-					 />
-					 <Button variant="contained"
-								disabled={!isValid}
-								color="primary"
-								onClick={() => {
-									 console.log('onclick')
-									 fetchExposureCallback()
-								}}>Calculate Exposure</Button>
-				
-				</Box>
+		  <CardWrapper>
+				<TextField
+					 style={{marginBottom: 20}}
+					 type="number"
+					 onChange={(event) => {
+						  const parsedInput = parseInt(event.target.value);
+						  setInputValue(parsedInput);
+						  setIsValid(isInRange(parsedInput, 0, 11))
+					 }}
+					 onKeyPress={(event) => {
+						  if (event.key === 'Enter' && isValid) {
+								fetchExposureCallback();
+								event.preventDefault();
+						  }
+					 }}
+				/>
+				<Button variant="outlined"
+						  disabled={!isValid}
+						  color="primary"
+						  onClick={() => {
+								fetchExposureCallback()
+						  }}>Calculate</Button>
 				{data && <pre>{JSON.stringify(data.exposure, null, 2)}</pre>}
 				{error &&
 				<pre>
 					 <span>{getUserMessage(error)}</span>
 					 </pre>}
-		  </Box>
-	 
+		  </CardWrapper>
 	 )
 }
 

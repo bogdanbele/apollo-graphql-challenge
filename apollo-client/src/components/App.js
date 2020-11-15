@@ -1,22 +1,39 @@
 import React from "react";
 import logo from '../logo.svg';
-import './App.css';
-import SecretValueCalculator from "./secretValueCalculator";
+import SecretValueCalculator from "./valueCalculator";
 import {MuiThemeProvider, createMuiTheme} from "@material-ui/core";
+import {Container} from "./styles";
+import {ThemeProvider} from "styled-components";
 
 const theme = createMuiTheme({
 	 palette: {
-		  primary: {main: '#00bcd4'},
-		  secondary:{main: '##ff4081'},
-	 }
+		  primary: {main: '#003755'},
+		  secondary: {main: '#FFF'},
+		  background: {
+				default: '#003755'
+		  },
+	 },
+	 overrides: {
+		  MuiButton: {
+				root: {
+					 // Name of the rule
+					 borderRadius: 20
+				}
+		  },
+	 },
 });
 
 function App() {
 	 return (
 		  <MuiThemeProvider theme={theme}>
-				<div className="App">
-					 <SecretValueCalculator/>
-				</div>
+				<ThemeProvider theme={theme}>
+					 <Container>
+						  <div>
+								<h1>Header</h1>
+						  </div>
+						  <SecretValueCalculator/>
+					 </Container>
+				</ThemeProvider>
 		  </MuiThemeProvider>
 	 );
 }
