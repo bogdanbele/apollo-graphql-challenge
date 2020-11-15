@@ -1,9 +1,11 @@
-import React, {useCallback, useState} from 'react';
-import {Button} from "@material-ui/core";
+import React, {useCallback, useEffect, useState} from 'react';
+import {Button, CardContent, CardHeader} from "@material-ui/core";
 import TextField from "@material-ui/core/TextField";
-import {gql, useLazyQuery} from "@apollo/client";
+import {gql, useApolloClient, useLazyQuery} from "@apollo/client";
 import isInRange from "lodash.inrange";
 import {CardWrapper} from './styles';
+import ResponseModal from "../modal";
+import {IS_NOTIFICATION_MODAL_OPEN} from "../../apollo/queries";
 
 const FETCH_EXPOSURE = gql`
     query exposure($inputValue: Int!){
@@ -25,7 +27,15 @@ const getUserMessage = (error) => {
 const SecretValueCalculator = () => {
 	 const [inputValue, setInputValue] = useState(null);
 	 const [isValid, setIsValid] = useState(false);
-	 const [fetchExposure, {loading, error, data}] = useLazyQuery(FETCH_EXPOSURE);
+	 const [fetchExposure, {loading, error, data, client}] = useLazyQuery(FETCH_EXPOSURE, {
+		  fetchPolicy: "network-only",
+		  onCompleted: () => client.writeQuery({
+				query: IS_NOTIFICATION_MODAL_OPEN,
+				data: {
+					 isNotificationModalOpen: true,
+				}
+		  })
+	 });
 	 
 	 const fetchExposureCallback = useCallback(() => {
 		  fetchExposure({
@@ -33,34 +43,45 @@ const SecretValueCalculator = () => {
 		  });
 	 }, [fetchExposure, inputValue]);
 	 
+	 const onChange = (event) => {
+		  const parsedInput = parseInt(event.target.value);
+		  setInputValue(parsedInput);
+		  setIsValid(isInRange(parsedInput, 0, 11))
+	 }
+	 
+	 const onKeyPress = (event) => {
+		  if (event.key === 'Enter' && isValid) {
+				fetchExposureCallback();
+				event.preventDefault();
+		  }
+	 }
+	 
+	 const multiplyValues = ({val3, val5}) => val3 * val5
+	 
+	 
 	 return (
 		  <CardWrapper>
 				<TextField
 					 style={{marginBottom: 20}}
 					 type="number"
-					 onChange={(event) => {
-						  const parsedInput = parseInt(event.target.value);
-						  setInputValue(parsedInput);
-						  setIsValid(isInRange(parsedInput, 0, 11))
-					 }}
-					 onKeyPress={(event) => {
-						  if (event.key === 'Enter' && isValid) {
-								fetchExposureCallback();
-								event.preventDefault();
-						  }
-					 }}
+					 onChange={onChange}
+					 onKeyPress={onKeyPress}
 				/>
-				<Button variant="outlined"
+				<Button variant="contained"
 						  disabled={!isValid}
 						  color="primary"
-						  onClick={() => {
-								fetchExposureCallback()
-						  }}>Calculate</Button>
-				{data && <pre>{JSON.stringify(data.exposure, null, 2)}</pre>}
+						  onClick={fetchExposureCallback}>Calculate</Button>
+				{data &&
+					 <ResponseModal>
+						  <CardHeader title="Success" subheader="Your calculation is completed"/>
+						  <CardContent>
+								{multiplyValues(data.exposure)}
+						  </CardContent>
+					 </ResponseModal>}
 				{error &&
-				<pre>
-					 <span>{getUserMessage(error)}</span>
-					 </pre>}
+							<pre>
+								<span>{getUserMessage(error)}</span>
+						  </pre>}
 		  </CardWrapper>
 	 )
 }

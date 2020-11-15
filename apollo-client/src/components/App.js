@@ -3,14 +3,14 @@ import SecretValueCalculator from "./valueCalculator";
 import {MuiThemeProvider, createMuiTheme} from "@material-ui/core";
 import {Container} from "./styles";
 import {ThemeProvider} from "styled-components";
-import {useApolloClient} from "@apollo/client";
-import {IS_NOTIFICATION_MODAL_OPEN} from "../apollo/queries";
-import ResponseModal from "./modal";
 
 const theme = createMuiTheme({
+	 typography: {
+	 	fontFamily: "Kontrapunkt Light, sans-serif"
+	 },
 	 palette: {
 		  primary: {main: '#003755'},
-		  secondary: {main: '#FFF'},
+		  secondary: {main: '#ffffff'},
 		  background: {
 				default: '#003755'
 		  },
@@ -18,29 +18,22 @@ const theme = createMuiTheme({
 	 overrides: {
 		  MuiButton: {
 				root: {
-					 borderRadius: 20
+					 borderRadius: 50,
+				},
+				label: {
+					 padding: 8,
+					 textTransform: "none",
 				}
 		  },
 	 },
 });
 
 function App() {
-	 const client = useApolloClient();
-	 
 	 return (
 		  <MuiThemeProvider theme={theme}>
 				<ThemeProvider theme={theme}>
-					 <ResponseModal/>
 					 <Container>
-						  <div>
-								<button onClick={() => client.writeQuery({
-									 query: IS_NOTIFICATION_MODAL_OPEN,
-									 data: {
-										  isNotificationModalOpen: true,
-									 }
-								})}>click</button>
-								<h1>Header</h1>
-						  </div>
+						  <h1>Header</h1>
 						  <SecretValueCalculator/>
 					 </Container>
 				</ThemeProvider>

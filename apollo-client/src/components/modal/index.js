@@ -5,8 +5,7 @@ import {IS_NOTIFICATION_MODAL_OPEN} from "../../apollo/queries";
 import {Overlay} from "./styles";
 import {CardWrapper} from "../valueCalculator/styles";
 
-
-const ResponseModal = () => {
+const ResponseModal = ({children}) => {
 	 const client = useApolloClient();
 	 
 	 const closeNotificationModal = () => {
@@ -22,7 +21,7 @@ const ResponseModal = () => {
 	 return data.isNotificationModalOpen && createPortal(
 		  <Overlay onClick={() => closeNotificationModal()}>
 				<CardWrapper onClick={(e) => e.stopPropagation()}>
-					 <p> Success!</p>
+					 {children}
 				</CardWrapper>
 		  </Overlay>,
 		  domElement);
